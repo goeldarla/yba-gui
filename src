@@ -1,0 +1,108 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("Main", "Default")
+
+local tab = DrRayLibrary.newTab("Mobile", "ImageIdHere")
+
+tab.newLabel("Dashing For Mobile")
+
+tab.newButton("Dash Forward", "Dashes Forward" function()
+    local args = {
+    [1] = "Dash",
+    [2] = {
+        ["MobileDashDirection"] = "Forward"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(unpack(args))
+
+end)
+
+tab.newButton("Dash Backwards", "Dashes Backwards" function()
+    local args = {
+    [1] = "Dash",
+    [2] = {
+        ["MobileDashDirection"] = "Backward"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(unpack(args))
+
+end)
+
+tab.newButton("Dash Left", "Dashes Left" function()
+    local args = {
+    [1] = "Dash",
+    [2] = {
+        ["MobileDashDirection"] = "Left"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(unpack(args))
+
+end)
+
+tab.newButton("Dash Right", "Dashes Right" function()
+    local args = {
+    [1] = "Dash",
+    [2] = {
+        ["MobileDashDirection"] = "Right"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(unpack(args))
+
+end)
+
+local atab = DrRayLibrary.newTab("Skill Points", "ImageIdHere")
+
+atab.newButton("Worthiness II", "Gets Worthiness II" function()
+    local args = {
+    [1] = "LearnSkill",
+    [2] = {
+        ["Skill"] = "Worthiness II",
+        ["SkillTreeType"] = "Character"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteFunction:InvokeServer(unpack(args))
+
+end)
+
+atab.newButton("Worthiness V", "Gets Worthiness V" function()
+    local args = {
+    [1] = "LearnSkill",
+    [2] = {
+        ["Skill"] = "Worthiness V",
+        ["SkillTreeType"] = "Character"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteFunction:InvokeServer(unpack(args))
+
+end)
+
+atab.newButton("Agility V", "Gets Agility V" function()
+    local args = {
+    [1] = "LearnSkill",
+    [2] = {
+        ["Skill"] = "Agility V",
+        ["SkillTreeType"] = "Character"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteFunction:InvokeServer(unpack(args))
+
+end)
+
+atab.newButton("Vitality X", "Gets Vitality X" function()
+    local args = {
+    [1] = "LearnSkill",
+    [2] = {
+        ["Skill"] = "Vitality X",
+        ["SkillTreeType"] = "Character"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.RemoteFunction:InvokeServer(unpack(args))
+
+end)
